@@ -1,0 +1,43 @@
+@import '../base/base';
+
+.nav {
+  background-color: $primary-red;
+  font-weight: bolder;
+
+  li {
+
+    &.brand {
+      a:hover {
+        background-color: $primary-red;
+        color: $white;
+      }
+    }
+
+    a {
+      border-bottom: none !important;
+      background-color: $primary-red;
+      color: $white;
+      border: none;
+    }
+
+    a:hover {
+      background-color: $white;
+      color: $primary-red;
+    }
+
+    &.active {
+      a,a:hover {
+        background-color: $white;
+        color: $primary-red;
+      }
+    }
+  }
+}
+
+.navbar-fixed-bottom {
+  .container {
+    text-align: center;
+    color: $white;
+    background-color: $primary-red;
+  }
+}

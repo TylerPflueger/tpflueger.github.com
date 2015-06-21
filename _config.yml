@@ -1,0 +1,26 @@
+# Site settings
+title: Tyler Pflueger
+email: tpflueger13@gmail.com
+description: Personal website and blog to share random thoughts.
+baseurl: "" # the subpath of your site, e.g. /blog/
+github_username:  TylerPflueger
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+
+#Default settings
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      author: Tyler Pflueger
+      layout: "post"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "page"
