@@ -51,10 +51,17 @@ html {
 body {
     background-color: $grey-color-light;
     height: 100%;
+    padding-bottom: 62px;
 }
 
 .container {
     margin-top: 16px;
     margin-bottom: 16px;
     background-color: white;
+}
+
+.main-wrapper {
+    padding-bottom: 8px;
+    background-color: $grey-color-light;
+    min-height: 100%;
 }

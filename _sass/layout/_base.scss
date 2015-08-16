@@ -1,1 +1,90 @@
+body,
+div,
+p,
+h1,
+h2,
+h3 {
+	font-family: 'Helvetic Neue', sans-serif;
+}
 
+p {
+	text-indent: 24px;
+}
+.padding {
+	padding: 8px;
+}
+
+.padding-double {
+	padding: 16px;
+}
+
+.img-rounded {
+	width: 264px;
+}
+
+.content {
+	position:relative;
+}
+
+.container {
+	.text {
+		&.percent {
+			color: $primary-red;
+		}
+	}
+
+	&.prog {
+		width: 100%;
+	}
+}
+
+.progress-bar {
+	background-color: $primary-red;
+}
+
+@media screen and (max-width:620px) {
+	div,
+	p,
+	h1,
+	h2,
+	h3 {
+		font-size: 1.75rem;
+	}
+
+	.img-rounded {
+		margin: 0 auto;
+	}
+
+	.content {
+		top: 16px;
+		margin-right: 4px;
+	}
+
+	.progress {
+		height: 28px;
+	}
+}
+
+@media screen and (min-width:620px) {
+	div,
+	p,
+	h1,
+	h2,
+	h3 {
+		font-size: 3rem;
+	}
+
+	.img-rounded {
+		float: left;
+		left: 16px;
+	}
+
+	.content {
+		left: 16px;
+		margin-right: 4px;
+	}
+
+	.progress {
+		height: 42px;
+	}
+}
