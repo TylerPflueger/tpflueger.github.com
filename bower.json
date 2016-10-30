@@ -1,0 +1,25 @@
+{
+  "name": "tpflueger.github.com",
+  "version": "1.0",
+  "homepage": "https://github.com/TylerPflueger/tpflueger.github.com",
+  "authors": [
+    "Tyler Pflueger <TylerPflueger@hotmail.com>"
+  ],
+  "description": "Personal website",
+  "main": "index.html",
+  "keywords": [
+    "Jekyll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4",
+    "font-awesome": "~4.4.0"
+  }
+}

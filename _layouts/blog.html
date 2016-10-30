@@ -1,19 +1,27 @@
 ---
 layout: default
 ---
-<div class="home">
+<div class="container padding-double">
+    <div class="wrapper">
 
-    <h1 class="page-heading">Posts</h1>
+        <div class="home">
 
-    <ul class="post-list">
-        {% for post in site.posts %}
-        <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-        </li>
-        {% endfor %}
-    </ul>
+            <ul class="post-list">
+                {% for post in site.posts %}
+                <div class="flex content-between">
+                    <h2>{{ post.title }}</h2>
+                    <div class="post-meta flex item-middle">{{ post.date | date: "%b %-d, %Y" }}</div>
+                </div>
+                <p>{{ post.excerpt }}
+                    <div class="flex align-bottom">
+                        <a href="{{ post.url | prepend: site.baseurl }}">read more...</a>
+                    </div>
+                </p>
+                {% if forloop.index != forloop.length %}
+                    <hr>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>

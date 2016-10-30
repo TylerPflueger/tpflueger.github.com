@@ -35,9 +35,30 @@
 }
 
 .navbar-bottom {
+  height: 62px;
+
   .container {
+    font-size: 2rem;
     text-align: center;
     color: $white;
     background-color: $primary-red;
+    margin: 0 auto;
+  }
+
+  p, div, a {
+    color: $white;
+    font-size: 2rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .fa {
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }

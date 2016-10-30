@@ -1,77 +1,17 @@
 ---
 layout: default
-skills:
-  first-column:
-      - name: JavaScript
-        value: 75
-      - name: AngularJS
-        value: 75
-      - name: HTML5
-        value: 70
-      - name: CSS3
-        value: 65
-      - name: Ionic
-        value: 60
-      - name: LESS
-        value: 50
-      - name: Sass
-        value: 40
-      - name: ExpressJS
-        value: 25
-      - name: MeteorJS
-        value: 25
-  second-column:
-      - name: NodeJS
-        value: 25
-      - name: SQL
-        value: 20
-      - name: MongoDB
-        value: 15
-      - name: Rails
-        value: 15
-      - name: C
-        value: 15
-      - name: Java
-        value: 15
-      - name: C++
-        value: 15
-      - name: PHP
-        value: 10
-      - name: Obj-C
-        value: 10
 ---
-<div class="wrapper">
-    <img src="./img/Tyler.jpg" alt="Tyler, Tanner, and Charlie" class="img-rounded img-responsive">
-    <div class="caption">
-        <p class="content">Hi, my name is Tyler Pflueger, and I am currently a student at the University of Nebraska at Omaha. I currently work at Aviture as a Junior Software Engineer in respect to Web Development.</p>
-        <p class="content">I first took interest in programming thanks to the gift my parents gave me of the Gameboy. I was so intriqued that I asked my dad if he could make the video games and I would always draw up the ideas. The will to create video games made me passionate about learning programming. As I grew up, I tried and tried to learn programing but would always fail due to the overwhelming amount of work to even start. I finally was able to take programming classes and fell in love with it.</p>
-        <p class="content">My current passion is using Mobile and Web to create unique experiences. Along the way, its always great to play with the latest technologies. In my spare time I play with new frameworks, work on mobile apps, and whatever other stereotypical college student does.</p>
-        <hr>
-        <h1 class="text align-center padding-double-top">Skills</h1>
-        <div class="container prog">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    {% for item in page.skills.first-column %}
-                    <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4">{{ item.name }}</div>
-                    <div class="progress pos-relative">
-                        <div class="pos-absolute full-width full-height text align-center">{{item.value}}%</div>
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                        aria-valuenow="{{ item.value }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ item.value}}%">
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    {% for item in page.skills.second-column %}
-                    <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4">{{ item.name }}</div>
-                    <div class="progress pos-relative">
-                        <div class="pos-absolute full-width full-height text align-center">{{item.value}}%</div>
-                        <div class="progress-bar progress-bar-striped" role="progressbar"
-                             aria-valuenow="{{ item.value }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ item.value}}%">
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
+<div class="container padding-double">
+    <div class="wrapper">
+        <div class="wrapper">
+            <img src="./img/Tyler.jpg" alt="Tyler, Tanner, and Charlie" class="img-rounded img-responsive">
+
+            <div class="caption">
+                {% capture content %}{% include index.md %}{% endcapture %}
+                {% assign contentArray = content | markdownify | split: site.excerpt_separator %}
+                {% for item in contentArray %}
+                <p class="content">{{ item }}</p>
+                {% endfor %}
             </div>
         </div>
     </div>

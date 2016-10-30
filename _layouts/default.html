@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include common/head.html %}
 
   <body>
     <div class="main-wrapper">
-      {% include header.html %}
+      {% include common/header.html %}
 
-      <div class="container padding-double">
-        <div class="wrapper">
-          {{ content }}
-        </div>
-      </div>
-
-      <!--{% include footer.html %}-->
+      {{ content }}
     </div>
-    {% include footer.html %}
+    {% include common/footer.html %}
   </body>
 
 </html>

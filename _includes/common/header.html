@@ -1,0 +1,24 @@
+<!-- Capture and store a URL -->
+{% capture location %}{{ page.url | split:'/' }}{% endcapture %}
+{% capture currentType %}{{ page.type }}{% endcapture %}
+<header class="main-header">
+    <ul class="nav nav-tabs navbar-default nav-justified">
+      <li class="brand">
+        <a href="/" title="Tyler Pflueger - Home">
+          Tyler Pflueger
+        </a>
+      </li>
+      <li class="nav_item"></li>
+      {% for page in site.pages %}
+      <!-- Compare the page title to the URL -->
+      {% assign pageType = page.type | downcase %}
+
+      {% if page.title %}
+      <li {% if currentType == pageType %} class="active" {% else %} class="nav__item" {% endif %}>
+        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      </li>
+      {% endif %}
+
+      {% endfor %}
+    </ul>
+</header>

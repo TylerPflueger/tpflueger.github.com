@@ -9,6 +9,9 @@ github_username:  TylerPflueger
 markdown: kramdown
 permalink: /:title
 
+# Separator
+excerpt_separator: <paragraph>
+
 #Default settings
 defaults:
   -
